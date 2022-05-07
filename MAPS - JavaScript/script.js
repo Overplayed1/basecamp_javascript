@@ -1,0 +1,18 @@
+function getAdmins(map){
+    let admins = [];
+    for ([key, value] of map){
+        if (value === 'Admin'){
+            admins.push(key);
+        }
+    }
+    return admins;
+}
+
+const usuarios = new Map();
+
+usuarios.set('Luiz','Admin');
+usuarios.set('Stephany','Admin');
+usuarios.set('Joao','Admin');
+usuarios.set('Roger','User');
+
+console.log(getAdmins(usuarios));
